@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Chat</title>
+  </head>
+  <body style="background-image: url(https://images.unsplash.com/photo-1600093112291-7b553e3fcb82?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aW5kaWFuJTIwZmxhZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80);">
+
+    <h3 style='color: rgb(0, 95, 5);font-size: 40px; text-align: center;'>No Message Yet</h3>
+    <div class="message_holder"></div>
+
+    <form action="" method="POST" style="position: relative;left: 550px;">
+        <input type="text" class="username" disabled="disabled" value="{{session.username}}" name="EditRecordnote" id="EditRecordnote" placeholder="User Name" / style="text-align: center; font-weight: 500;border-radius: 6px;font-size: 24px; ">
+        <input type="text" class="message" placeholder="Messages" / style="text-align: center;font-weight: 500;border-radius: 6px;font-size: 24px;">
+        <input type="submit" / style="font-weight: 800;color: darkred; box-sizing: border-box;border: 2px solid rgb(0, 66, 9); border-radius: 6px;background-color: #3CBC8D; color: white;display: inline-block;font-size: 24px;">
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <script type="text/javascript">
+	
+		var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+		socket.on( 'connect', function() {
+			socket.emit( 'my event', {
+				data: 'User Connected'
+			} )
+			var form = $( 'form' ).on( 'submit', function( e ) {
+				e.preventDefault()
+				let user_name = $( 'input.username' ).val()
+				let user_input = $( 'input.message' ).val()
+				socket.emit( 'my event', {
+					user_name : user_name,
+					message : user_input
+				} )
+				$( 'input.message' ).val( '' ).focus()
+			} )
+		} )
+		socket.on( 'my response', function( msg ) {
+			console.log( msg )
+			if( typeof msg.user_name !== 'undefined' ) {
+				$( 'h3' ).remove()
+				$( 'div.message_holder' ).append( '<div><b style="color: #000">'+msg.user_name+'</b> '+msg.message+'</div>' )
+			}
+		})
+    </script>
+
+  </body>
+  </html>

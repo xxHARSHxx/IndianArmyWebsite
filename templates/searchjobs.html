@@ -1,0 +1,72 @@
+<html> 
+<head> 
+
+<meta charset="UTF-8"> 
+<title> Eligibility </title> 
+<link rel="stylesheet" href="{{ url_for('static', filename='styleg.css') }}">               
+
+</head> 
+
+<body>
+
+<marquee scrollamount="10" >Check Eligibility</marquee>
+
+</br></br></br></br> 
+<div class="searchjobs" align="center">
+
+<h2> 
+<form action="{{ url_for('eligibility') }}" onsubmit="return check()" method="post"> 
+<input id="age" name="age" type="text" placeholder="Enter Age" class="textbox" size="20"/></br>
+<label for="gender">Choose a Gender:</label>
+<select class="textbox" name="gender" id="gender">
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+</select></br>
+<label for="qualification">Choose a Qualification:</label>
+<select class="textbox" name="qualification" id="qualification">
+  <option value="10+2">10+2</option>
+  <option value="BA">BA</option>
+  <option value="BSc(Maths)">BSc(Maths)</option>
+  <option value="BArch">BArch</option>
+  <option value="BSc(Nursing)">BSc(Nursing)</option>
+  <option value="MSc(Nursing)">MSc(Nursing)</option>  
+  <option value="BTech">BTech</option>
+  <option value="MSc(Computer)">MSc(Computer)</option>
+</select></br></br></br>
+<button type="submit" value="Sign Up">Check</button></br> 
+</form> 
+
+<script>
+function check(){
+  let a=document.getElementById("age").value;
+  let b=document.getElementById("gender").value;
+  let c=document.getElementById("qualification").value;
+  if(a<1){
+	alert("Enter valid age value!");
+	return false;
+  }
+  else if(b=""){
+	alert("Gender cannot be blank!");
+	return false;
+  }
+  else if(c==""){
+	alert("Qualification cannot be blank!");
+	return false;
+  }
+}
+</script>
+
+</h2> 
+
+</div>
+	<footer style="position: relative; top: 50px; background-color: coral; text-align: center;">
+        <p>
+            Terms & Conditions | Privacy Policy | Copyright Policy | Hyperlinking Policy | Accessibility | Statement | Help <br /> Copyright © 2021 Join Indian Army, All Rights Reserved.
+        </p>
+        <p>
+            <a href="cse200001007@iiti.ac.in">cse200001006@iiti.ac.in | cse200001007@iiti.ac.in | cse200001012@iiti.ac.in | cse200001027@iiti.ac.in</a>
+        </p>
+    </footer> 
+
+</body> 
+</html> 

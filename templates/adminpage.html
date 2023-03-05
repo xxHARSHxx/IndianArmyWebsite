@@ -1,0 +1,38 @@
+<html> 
+<head> 
+
+<meta charset="UTF-8"> 
+<title> Admin </title> 
+<link rel="stylesheet" href="{{ url_for('static', filename='styleg.css') }}">            
+
+</head> 
+
+<body>
+<div class="adminpage" align="center"> 
+
+<h1>
+
+<a href="{{ url_for('deleteuser') }}" style="color: coral;">Delete User</a></br>
+<a href="{{ url_for('verifyofficer') }}" style="color: coral;">Verify Officer</a></br>
+<a href="{{ url_for('addnews') }}" style="color: coral;">Add News</a></br>
+<a href="{{ url_for('deletenews') }}" style="color: cornsilk;">Delete News</a></br>
+<a href="{{ url_for('addnotif') }}" style="color: cornsilk;">Add Notification</a></br>
+<a href="{{ url_for('deletenotif') }}" style="color: cornsilk;">Delete Notification</a></br>
+<a href="{{ url_for('addarticle') }}" style="color: rgb(151, 255, 103);">Add Article</a></br>
+<a href="{{ url_for('deletearticle') }}" style="color: rgb(151, 255, 103);">Delete Article</a></br>
+<a href="{{ url_for('deleteblog') }}" style="color: rgb(151, 255, 103);">Delete Blog Post</a></br></br>
+<a href="{{ url_for('logout') }}" style="color: cornsilk;">Logout</a>
+</h1>
+</div>
+
+	<footer style="position: relative; top: 130px; background-color: coral; text-align: center;">
+        <p>
+            Terms & Conditions | Privacy Policy | Copyright Policy | Hyperlinking Policy | Accessibility | Statement | Help <br /> Copyright © 2021 Join Indian Army, All Rights Reserved.
+        </p>
+        <p>
+            <a href="cse200001007@iiti.ac.in">cse200001006@iiti.ac.in | cse200001007@iiti.ac.in | cse200001012@iiti.ac.in | cse200001027@iiti.ac.in</a>
+        </p>
+    </footer>
+
+</body> 
+</html> 

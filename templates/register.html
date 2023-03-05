@@ -1,0 +1,77 @@
+<html> 
+<head> 
+
+<meta charset="UTF-8"> 
+<title> Registration </title> 
+<link rel="stylesheet" href="{{ url_for('static', filename='styleg.css') }}">               
+
+</head> 
+
+<body>
+
+<marquee scrollamount="10" >Portal for User Registration</marquee>
+
+</br></br></br></br> 
+<div class="register" align="center">
+
+<h2> 
+<form action="{{ url_for('register') }}" onsubmit="return check()" method="post"> 
+<div class="msg">{{ msg }}</div> 
+<input id="username" name="username" type="text" placeholder="Enter Username" class="textbox" size="20"/></br>
+<input id="password" name="password" type="password" placeholder="Enter Password" class="textbox" size="20"/></br> 
+<input id="mobno" name="mobno" type="text" placeholder="Enter Mobile Number" class="textbox" size="20"/></br>
+<label for="category" style="color: cornsilk;">Choose a Category:</label>
+<select class="textbox" name="category" id="category">
+  <option value="Officer">Officer</option>
+  <option value="Civilian">Civilian</option>
+</select></br>
+<label for="gender" style="color: cornsilk;">Choose a Gender:</label>
+<select class="textbox" name="gender" id="gender">
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+</select></br>
+<input id="name" name="name" type="text" placeholder="Enter Name" class="textbox" size="20"/></br>
+<input id="email" name="email" type="text" placeholder="Enter Email Address" class="textbox" size="20"/></br>
+<button type="submit" value="Sign Up">Register</button></br> 
+</form> 
+
+<script>
+function check(){
+  let a=document.getElementById("username").value;
+  let b=document.getElementById("password").value;
+  let c=document.getElementById("category").value;
+  let d=document.getElementById("name").value;
+  if(a==""){
+	alert("Username cannot be blank!");
+	return false;
+  }
+  else if(b.length<8){
+	alert("Password should have atleast 8 characters!");
+	return false;
+  }
+  else if(c==""){
+	alert("Category cannot be blank!");
+	return false;
+  }
+  else if(d==""){
+	alert("Name cannot be blank!");
+	return false;
+  }
+}
+</script>
+
+</h2> 
+<p class="bottom">Already have an account? &nbsp<a class="bottom" href="{{url_for('userlogin')}}">Sign In Here</a></p> 
+
+</div> 
+	<footer style="position: relative; top: 130px; background-color: coral; text-align: center;">
+        <p>
+            Terms & Conditions | Privacy Policy | Copyright Policy | Hyperlinking Policy | Accessibility | Statement | Help <br /> Copyright © 2021 Join Indian Army, All Rights Reserved.
+        </p>
+        <p>
+            <a href="cse200001007@iiti.ac.in">cse200001006@iiti.ac.in | cse200001007@iiti.ac.in | cse200001012@iiti.ac.in | cse200001027@iiti.ac.in</a>
+        </p>
+    </footer>
+
+</body> 
+</html> 

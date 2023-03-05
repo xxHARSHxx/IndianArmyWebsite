@@ -1,0 +1,134 @@
+<html> 
+<head> 
+
+<meta charset="UTF-8"> 
+<title> Home </title> 
+<link rel="stylesheet" href="{{ url_for('static', filename='styleg.css') }}">
+                      
+</head> 
+
+<body class="body1"></br></br> 
+<h1 align="center"> 
+
+Welcome to IIT Indore, {{session.username}}!</br></br>                
+
+</h1> 
+
+<table>
+  <tr>
+	<th>Course Code</th>
+    <th>Course Title</th>
+    <th>Weekly L-T-P</th>
+    <th>Credits</th>
+  </tr>
+  <tr>
+	<td>CS 103</td>
+    <td>Computer Programming</td>
+    <td>2-0-0</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>CS 201</td>
+    <td>Discrete Mathematical Structures</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>CS 203</td>
+    <td>Data Structures and Algorithms</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>CS 207</td>
+    <td>Data Base & Information Systems</td>
+    <td>3-0-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+	<td>CS 202</td>
+    <td>Automata Theory and Logic</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>CS 204</td>
+    <td>Design and Analysis of Algorithms</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>CS 206</td>
+    <td>Logic Design</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>CS 208</td>
+    <td>Software Engineering</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+	<td>CS 309</td>
+    <td>Parallel Computing</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>CS 303</td>
+    <td>Operating Systems</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>CS 305</td>
+    <td>Computer Architecture</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>CS 307</td>
+    <td>Optimization Algorithms and Techniques</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+	<td>CS 302</td>
+    <td>Computer Graphics and Visualization</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>CS 304N</td>
+    <td>Computational Intelligence</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>CS 306</td>
+    <td>Computer Networks</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>CS 308</td>
+    <td>Compiler Techniques</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>CS 419</td>
+    <td>Computer Vision</td>
+    <td>2-1-0</td>
+    <td>3</td>
+  </tr>
+</table>
+</br></br></br>
+
+<div align="center">
+<a href="{{ url_for('logout') }}" class="bottom2">Logout</a>
+</div>
+
+</body> 
+</html> 

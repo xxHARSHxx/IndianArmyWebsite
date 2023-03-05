@@ -1,0 +1,55 @@
+<html> 
+<head> 
+
+<meta charset="UTF-8"> 
+<title> Add Blog </title> 
+<link rel="stylesheet" href="{{ url_for('static', filename='styleg.css') }}">               
+
+</head> 
+
+<body>
+<div class="addblog" align="center">
+
+<h2> 
+<form action="{{ url_for('addblog') }}" onsubmit="return check()" method="post"> 
+<div class="msg">{{ msg }}</div> 
+<input id="blogid" name="blogid" type="text" placeholder="Enter Blog ID" class="textbox" size="20"/></br>
+<input id="title" name="title" type="text" placeholder="Enter Title" class="textbox" size="20"/></br>
+<input id="blog" name="blog" type="text" placeholder="Enter Blog Text" class="textbox" size="20"/></br></br></br>
+<button type="submit" value="Add">Add</button></br> 
+</form> 
+
+<script>
+function check(){
+  let a=document.getElementById("blogid").value;
+  let b=document.getElementById("title").value;
+  let c=document.getElementById("blog").value;
+  if(a==""){
+	alert("BlogID cannot be blank!");
+	return false;
+  }
+  else if(b=""){
+	alert("Title cannot be blank!");
+	return false;
+  }
+  else if(c==""){
+	alert("Blog Text cannot be blank!");
+	return false;
+  }
+}
+</script>
+
+</h2>
+
+</div>
+	<footer style="position: relative; top: 220px; background-color: coral; text-align: center;">
+        <p>
+            Terms & Conditions | Privacy Policy | Copyright Policy | Hyperlinking Policy | Accessibility | Statement | Help <br /> Copyright © 2021 Join Indian Army, All Rights Reserved.
+        </p>
+        <p>
+            <a href="cse200001007@iiti.ac.in">cse200001006@iiti.ac.in | cse200001007@iiti.ac.in | cse200001012@iiti.ac.in | cse200001027@iiti.ac.in</a>
+        </p>
+    </footer> 
+
+</body> 
+</html>

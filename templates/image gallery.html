@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Image Gallery</title>
+</head>
+
+<body>
+    <nav style="background: black;">
+
+        <div class="image_h1">
+
+            <h1>WELCOME TO THE IMAGE GALLERY</h1>
+
+        </div>
+        <div class="marquee-parent">
+            <div class="marquee-child" style="color: greenyellow;">
+                The Image Gallery
+            </div>
+        </div>
+    </nav>
+
+    <div class="list1" style="position: relative; top: 95px;">
+        <img src="{{url_for('static', filename='sports.jpg')}}" alt="" ; width="33%">
+        <img src="{{url_for('static', filename='events.jpg')}}" alt="" width="33%">
+        <img src="{{url_for('static', filename='action.jpg')}}" alt="" width="33%">
+        <br>
+        <a href="{{ url_for('imagesports') }}" style="position: relative; left: 200px; font-size: 150%;">Sports</a>
+        <a href="{{ url_for('imageevents') }}" style="position: relative; left: 700px; font-size: 150%">Events</a>
+        <a href="{{ url_for('armyinaction') }}" style="position: relative; left: 1100px; font-size: 150% ">Army in action</a>
+
+    </div>
+    <footer>
+        <p>
+            Terms & Conditions | Privacy Policy | Copyright Policy | Hyperlinking Policy | Accessibility | Statement | Help <br /> Copyright © 2021 Join Indian Army, Government of India. All Rights Reserved.
+        </p>
+        <p>
+            <a href="mailto:cse200001007@iiti.ac.in">cse200001006@iiti.ac.in | cse200001007@iiti.ac.in |
+          cse200001012@iiti.ac.in | cse200001027@iiti.ac.in
+        </a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
